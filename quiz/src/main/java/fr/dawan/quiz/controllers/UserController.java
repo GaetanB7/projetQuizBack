@@ -73,9 +73,9 @@ public class UserController {
     	    	else if (!ptr.matcher(user.getEmail()).matches()) {
     		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("L'email que vous avez saisie n'est pas valide");
 		}
-    	else if (!service.findUserByEmail(user.getEmail()).isEmpty()) {
-			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("L'email : "+ user.getEmail() +" est déjà utilisé");
-		}
+//  	else if (!service.findUserByEmail(user.getEmail()).isEmpty()) {
+//			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("L'email : "+ user.getEmail() +" est déjà utilisé");
+//		}
 		
 		
 		else if (!expressRegPassword.matcher(user.getPassword()).matches()) {
